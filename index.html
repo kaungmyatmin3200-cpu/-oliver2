@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Open Your Letter</title>
+  <style>
+    body {
+      background-color: #ffc0cb;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .container {
+      text-align: center;
+    }
+/* Center the wrapper itself */
+.envelope-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin: 60px auto 30px;
+}
+
+/* Envelope box */
+.envelope {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  background: #fff;
+  border: 2px solid #d63384;
+  border-radius: 6px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Triangle flap */
+.envelope::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+  border-bottom: 100px solid #d63384;
+  z-index: 2;
+}
+
+/* Smaller cute button on top */
+ .open-btn {
+      margin-top: 30px;
+      padding: 12px 25px;
+      font-size: 16px;
+      background-color: #fff;
+      color: #d63384;
+      border: 2px solid #d63384;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .open-btn:hover {
+      background-color: #d63384;
+      color: white;
+    }
+
+    @media (max-width: 400px) {
+      .envelope {
+        width: 220px;
+        height: 140px;
+      }
+
+      .envelope::before {
+        border-left: 110px solid transparent;
+        border-right: 110px solid transparent;
+        border-bottom: 80px solid #d63384;
+      }
+    }
+ 
+/* Smaller & cuter version of the button */
+.envelope-container #surprise-btn{
+  background: linear-gradient(145deg, #ff9acb, #ff6fa2);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 8px 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: 'Comic Sans MS', 'Poppins', cursive;
+  cursor: pointer;
+  box-shadow: 0 0 10px #ff6fa2;
+  transition: all 0.3s ease;
+  animation: softBounce 2s infinite;
+  margin-top: 150px;
+  
+  
+}
+
+
+ .envelope-container #surprise-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #ff69b4, 0 0 30px #ff69b4;
+  
+}
+
+@keyframes softBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+  <div class="envelope"></div>
+  <a href="letter.html" class="open-btn">Open Here 💌</a>
+
+  <div class="envelope-container">
+  <button id="surprise-btn" onclick="toggleAudio()">Click here for more surprises 🎵</button>
+  <audio id="surprise-audio" src="Perfect   Ed Sheeran.mp3"></audio>
+</div>
+
+</div>
+
+<script>
+  function toggleAudio() {
+    const audio = document.getElementById('surprise-audio');
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  }
+</script>
+
+</div>
+ 
+</div>
+</body>
+</html>
+

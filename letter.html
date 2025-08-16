@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Your Letter</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Floating hearts -->
+  <div class="heart" style="left: 20%; animation-delay: 0s;"></div>
+  <div class="heart" style="left: 40%; animation-delay: 2s;"></div>
+  <div class="heart" style="left: 60%; animation-delay: 4s;"></div>
+  <div class="heart" style="left: 80%; animation-delay: 1s;"></div>
+
+  <div class="letter-container">
+    <h1>To Someone Special 💖</h1>
+
+    <div class="typewriter">
+      <p>
+        You light up my world in ways I can’t even explain.
+        Every smile, every moment, and every laugh we’ve shared stays with me.
+        I made this little surprise to remind you how special you truly are.
+        So... I need to ask you something important. Will you say yes?
+      </p>
+    </div>
+
+    <img src="img/animal-axolotl-wallpaper-preview.jpg" alt="Her Photo" class="letter-image" />
+
+   <div class="buttons">
+  <button 
+    onclick="showModal(this)" 
+    data-img="img/sad.jpg" 
+    data-text="Yayayayaya! Thank you!! 💖✨"
+  >
+    Yes 💗
+  </button>
+
+  <button 
+    onclick="showModal(this)" 
+    data-img="img/happy.jpg" 
+    data-text="Oh no... maybe next time 😢💔"
+  >
+    No 💔
+  </button>
+</div>
+
+
+   
+    <a href="index.html" class="back-btn">← Back to Envelope</a>
+  </div>
+
+  <div class="modal" id="modal">
+    <div class="modal-content" id="modal-content">
+      <img id="mochi-img" src="img/happy.jpg" alt="Response Image" />
+      <p id="mochi-text"></p>
+      <button class="close-btn" onclick="closeModal()">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
