@@ -123,12 +123,33 @@
   </style>
 </head>
 <body>
+  <div class="envelope-container">
+  <button id="surprise-btn" onclick="toggleAudio()">CLICKK HEREE </button>
+  <audio id="surprise-audio" src="Perfect   Ed Sheeran.mp3"></audio>
+</div>
 
+</div>
+
+<script>
+  function toggleAudio() {
+    const audio = document.getElementById('surprise-audio');
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  }
+</script>
+
+</div>
+ 
+</div>
   
  
 </div>
 </body>
 </html>
+
 
 
 
