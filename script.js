@@ -38,5 +38,21 @@ function showModal(button) {
 
   modal.style.display = 'flex';
 }
+// Save time before leaving page
+window.addEventListener("beforeunload", () => {
+  const audio = document.getElementById("bg-audio");
+  localStorage.setItem("audioTime", audio.currentTime);
+});
+
+// Resume on new page
+window.addEventListener("load", () => {
+  const audio = document.getElementById("bg-audio");
+  const saved = localStorage.getItem("audioTime");
+  if (saved) {
+    audio.currentTime = saved;
+  }
+  audio.play();
+});
+
 
 
